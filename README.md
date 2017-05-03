@@ -58,7 +58,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 9. Copy-paste font data from **your_font.py** to suitable positions in **hersheydata.py** and **hershey.inx**
 
 10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text...** menu item.
-
+![Updated hershey text plugin](/i/plugin.png)
 
 
 
