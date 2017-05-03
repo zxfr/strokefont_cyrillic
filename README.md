@@ -14,7 +14,7 @@ Prerequisites
 
 [Roland Single Line Font Editor 2 (**SFEdit2**) Software v1.02](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
 
-[Inkscape](http://inkscape.org) - Recent versions include **Hershey Text plugin** by default
+[Inkscape](http://inkscape.org) - Recent versions include original **Hershey Text plugin** by default
 
 The scripts depend on Python modules **cu2qu** and **fontTools**
 
@@ -52,7 +52,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 
 > The script generates preview image **your_font.svg** and **your_font.py** Python code snippet.
 
-8. For cyrillic text support and for some new features I would recommend to backup and to overwrite default Inkscape/Hershey Text plugin files with the supplied ones (**hershey.py, hersheydata.py, hershey.inx** as a rule in **C:\Program Files\Inkscape\share\extensions**)
+8. For a better cyrillic text support and for some new features I would recommend to backup and to overwrite default Inkscape/Hershey Text plugin files with the supplied ones (**hershey.py, hersheydata.py, hershey.inx** as a rule in **C:\Program Files\Inkscape\share\extensions**)
 
 9. Copy-paste font data from **your_font.py** to suitable positions in **hersheydata.py** and **hershey.inx**
 
