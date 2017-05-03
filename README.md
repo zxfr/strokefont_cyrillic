@@ -39,6 +39,7 @@ python prepare_font.py -c your_font.otf
 4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input
 
 5. Review and adjust auto-generated glyphs. Glyph edit tools of ***SFEdit2.exe*** are intuitive enough. 
+
 ![SFEdit2.exe](/i/sfedit2.png)
 
 6. Save the font. It should appear in **C:\ProgramData\Roland DG Corporation\SFEdit2\Rsf2** with **.sf2** extension
@@ -58,6 +59,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 9. Copy-paste font data from **your_font.py** to suitable positions in **hersheydata.py** and **hershey.inx**
 
 10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text...** menu item.
+
 ![Updated hershey text plugin](/i/plugin.png)
 
 
