@@ -12,7 +12,7 @@ hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugi
 Prerequisites
 -------------
 
-[Roland Single Line Font Editor 2 (**SFEdit2**) Software v1.02](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
+Get **Roland Single Line Font Editor 2 (SFEdit2) Software v1.02** fron **Software Updates** section of the [official site](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
 
 [Inkscape](http://inkscape.org) - Recent versions include original **Hershey Text plugin** by default
 
@@ -36,7 +36,7 @@ python prepare_font.py -c your_font.otf
 
 3. Open the font with the default font viewer application and install it to the system.
 
-4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input
+4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input.
 
 5. Review and adjust auto-generated glyphs. 
 
