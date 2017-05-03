@@ -38,7 +38,7 @@ python prepare_font.py -c your_font.otf
 
 4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input
 
-5. Review and adjust auto-generated glyphs. Glyph edit tools of ***SFEdit2.exe*** are intuitive enough. 
+5. Review and adjust auto-generated glyphs. 
 
 ![SFEdit2.exe](/i/sfedit2.png)
 
@@ -62,7 +62,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 
 ![Updated hershey text plugin](/i/plugin.png)
 
-> **Hint:** To generate text section with line breaks copy-paste preformatted text (i.e. from a texteditor) to **Text** field of the plugin dialog window. 
+> **Hint:** To render a text section with forced line breaks copy-paste preformatted text (i.e. from a texteditor) to **Text** field of the plugin dialog window. 
 
 
 
