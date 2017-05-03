@@ -5,9 +5,9 @@ Single stroke font converter for Inkscape/Hershey Text
 hersheydata.py,
 hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugin some new features: text block formatting, input of cyrillic text in cp1251 encoding instead of koi7, combining of latin and cyrillic in text.
 
-**font_converter/converter.py** - converts **SFEdit2.exe** output to single stroke font in Inkscape/Hershey Text plugin font format (to be copy-pasted to **hersheydata.py** and **hershey.inx**)
+**font_converter/converter.py** - converts **SFEdit2.exe** output to single stroke font in Inkscape/Hershey Text plugin font format
 
-**font_converter/prepare_font.py** - prepares OTF/TTF font for **SFEdit2.exe** compatibility: converts OTF to TTF, optionally moves cyrillic cp1251 glyphs to positions, editable with **SFEdit2.exe**
+**font_converter/prepare_font.py** - prepares OTF/TTF font for **SFEdit2.exe**: converts OTF to TTF, optionally moves cyrillic cp1251 glyphs to positions, editable with **SFEdit2.exe**
 
 [Roland Single Line Font Editor 2 (**SFEdit2**) Software v1.02](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
 
@@ -22,9 +22,9 @@ python prepare_font.py your_font.otf
 or 
 python prepare_font.py -c your_font.otf
 ```
-Flag **-c** forces cyrillic glyphs to be copied to editable positions.
+> Flag **-c** forces cyrillic glyphs to be copied to editable positions.
 
-The script should output a TTF font, with name derived from the original font name.
+> The script should output a TTF font, with name derived from the original font name.
 
 3. Open the font with the default font viewer application and install it to the system.
 
@@ -40,9 +40,9 @@ python converter.py your_font.sf2 your_font.ttf
 or 
 python converter.py -c your_font.sf2 your_font.ttf
 ```
-Flag **-c** forces to additionally output cyrillic version of a font
+> Flag **-c** forces to additionally output cyrillic version of a font
 
-The script generates preview image **your_font.svg** and **your_font.py** Python code to be copy pasted to **hersheydata.py** and **hershey.inx** files of Inkscape/Hershey Text plugin (as a rule in **C:\Program Files\Inkscape\share\extensions**)
+> The script generates preview image **your_font.svg** and **your_font.py** Python code to be copy pasted to **hersheydata.py** and **hershey.inx** files of Inkscape/Hershey Text plugin (as a rule in **C:\Program Files\Inkscape\share\extensions**)
 
 
 
