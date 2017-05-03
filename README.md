@@ -32,7 +32,7 @@ python prepare_font.py -c your_font.otf
 ```
 > Flag **-c** forces cyrillic glyphs to be copied to editable positions.
 
-> The script should output a TTF font, with name derived from the original font name.
+> The script should output a TTF font with a name derived from the original font name.
 
 3. Open the font with the default font viewer application and install it to the system.
 
@@ -61,6 +61,8 @@ python converter.py -c your_font.sf2 your_font.ttf
 10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text...** menu item.
 
 ![Updated hershey text plugin](/i/plugin.png)
+
+> Hint: To generate text section with line breaks copy-paste preformatted text (i.e. from texteditor) to **Text** field of the plugin dialog window. 
 
 
 
