@@ -3,7 +3,7 @@ Single stroke font converter for Inkscape/Hershey Text
 
 **hershey.py,
 hersheydata.py,
-hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugin some new features: text block formatting, input of Cyrillic text in cp1251 encoding instead of koi7, combining of Latin and Cyrillic in a text.
+hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugin some new features: text block formatting, input of Cyrillic text in **cp1251** encoding instead of archaic **koi7**, combining of Latin and Cyrillic in a text.
 
 **font_converter/converter.py** - converts **SFEdit2.exe** output to single stroke font in Inkscape/Hershey Text plugin font format
 
@@ -14,7 +14,7 @@ Prerequisites
 
 Get **Roland Single Line Font Editor 2 (SFEdit2) Software v1.02** from **Software Updates** section of the [official site](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
 
-[Inkscape](http://inkscape.org) - Recent versions include original **Hershey Text plugin** by default
+[Inkscape](http://inkscape.org) - recent versions include original [Hershey Text plugin](http://www.evilmadscientist.com/2011/hershey-text-an-inkscape-extension-for-engraving-fonts/) by default
 
 The scripts depend on Python modules **cu2qu** and **fontTools**
 
@@ -63,6 +63,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 ![Updated hershey text plugin](/i/plugin.png)
 
 > **Hint:** To render a text section with forced line breaks copy-paste preformatted text (i.e. from a text editor) to **Text** field of the plugin dialog window. 
+
 
 ![In action](/i/plotter.jpg)
 
