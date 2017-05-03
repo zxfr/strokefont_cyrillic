@@ -12,7 +12,7 @@ hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugi
 Prerequisites
 -------------
 
-Get **Roland Single Line Font Editor 2 (SFEdit2) Software v1.02** fron **Software Updates** section of the [official site](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
+Get **Roland Single Line Font Editor 2 (SFEdit2) Software v1.02** from **Software Updates** section of the [official site](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
 
 [Inkscape](http://inkscape.org) - Recent versions include original **Hershey Text plugin** by default
 
