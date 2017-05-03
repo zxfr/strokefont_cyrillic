@@ -39,6 +39,7 @@ python prepare_font.py -c your_font.otf
 4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input
 
 5. Review and adjust generated glyphs. Glyph edit tools of ***SFEdit2.exe*** are intuitive enough. 
+![SFEdit2.exe](/i/sfedit2.png)
 
 6. Save the font. It should appear in **C:\ProgramData\Roland DG Corporation\SFEdit2\Rsf2** with **.sf2** extension
 
