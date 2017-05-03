@@ -62,7 +62,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 
 ![Updated hershey text plugin](/i/plugin.png)
 
-> Hint: To generate text section with line breaks copy-paste preformatted text (i.e. from texteditor) to **Text** field of the plugin dialog window. 
+> **Hint:** To generate text section with line breaks copy-paste preformatted text (i.e. from a texteditor) to **Text** field of the plugin dialog window. 
 
 
 
