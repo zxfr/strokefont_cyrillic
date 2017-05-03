@@ -28,7 +28,7 @@ python prepare_font.py -c your_font.otf
 
 3. Open the font with the default font viewer application and install it to the system.
 
-4. Run ***SFEdit2.exe*** and start a new font, selecting the just installed TTF as an input
+4. Run **SFEdit2.exe** and start a new font, selecting the just installed TTF as an input
 
 5. Review and adjust generated glyphs. Glyph edit tools of ***SFEdit2.exe*** are intuitive enough. 
 
@@ -42,7 +42,13 @@ python converter.py -c your_font.sf2 your_font.ttf
 ```
 > Flag **-c** forces to additionally output cyrillic version of a font
 
-> The script generates preview image **your_font.svg** and **your_font.py** Python code to be copy pasted to **hersheydata.py** and **hershey.inx** files of Inkscape/Hershey Text plugin (as a rule in **C:\Program Files\Inkscape\share\extensions**)
+> The script generates preview image **your_font.svg** and **your_font.py** Python code snippet.
+
+8. For cyrillic text support and for some new features I would recommend to backup and to overwrite default Inkscape/Hershey Text plugin files with the supplied ones (**hershey.py, hersheydata.py, hershey.inx** as a rule in **C:\Program Files\Inkscape\share\extensions**)
+
+9. Copy-paste font data from **your_font.py** to suitable positions in **hersheydata.py** and **hershey.inx**
+
+10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text** menu item.
 
 
 
