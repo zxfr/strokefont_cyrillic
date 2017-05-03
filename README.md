@@ -9,7 +9,15 @@ hershey.inx** - updated Inkscape/Hershey Text plugin. Adds to the original plugi
 
 **font_converter/prepare_font.py** - prepares OTF/TTF font for **SFEdit2.exe**: converts OTF to TTF, optionally moves cyrillic cp1251 glyphs to positions, editable with **SFEdit2.exe**
 
+Prerequisites
+-------------
+
 [Roland Single Line Font Editor 2 (**SFEdit2**) Software v1.02](http://support.rolanddga.com/_layouts/rolanddga/productdetail.aspx?pm=egx-30a)
+
+[Inkscape](http://inkscape.org) - Recent versions include **Hershey Text plugin** by default
+
+The scripts depend on Python modules **cu2qu** and **fontTools**
+
 
 How to use
 ----------
@@ -48,7 +56,7 @@ python converter.py -c your_font.sf2 your_font.ttf
 
 9. Copy-paste font data from **your_font.py** to suitable positions in **hersheydata.py** and **hershey.inx**
 
-10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text** menu item.
+10. Run **Inkscape** and open the plugin via **Extensions->Render->Hershey Text...** menu item.
 
 
 
