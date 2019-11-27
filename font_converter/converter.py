@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: latin-1 -*-
 
 ''' 
 converter.py
@@ -7,7 +8,7 @@ converter.py
 Inkscape's Hershey Text plugin
 
 
-Version 1.0.0, dated May 02, 2017.
+Version 1.0.1, dated Nov 27, 2019.
 
 Originally written by Igor Repinetski, http://pixelmeister.org
 
@@ -141,6 +142,9 @@ def generateFont(fileContent, ttFont, cyr):
             previewCode += "\t<path d=\""
             pathCode = ""
             
+            countsav = count
+            flag = None
+            prevcrd = None
             for k in range(nodesNum[j]):
                 flag = ord(fileContent[offset])
                 offset += 1
@@ -148,26 +152,46 @@ def generateFont(fileContent, ttFont, cyr):
                 crd = coords[count]
                 suff = ""
                 pref = " L"
-                if flag == 7:
-                    suff = "Z"
+                if flag == 7 or flag == 3:
+                    suff = ""
                 if k == 0:
                     pref = "M"
-                    
-                if k == 0 or crd[2] == 0 and crd[3] == 0 and crd[4] == 0 and crd[5] == 0:
-                    pathCode += "{}{:.2f},{:.2f} {}".format(pref, crd[0]/scale, crd[1]/scale + baseline, suff)
+                    pathCode += " M{:.2f},{:.2f} ".format((crd[0])/scale, (crd[1])/scale + baseline)
                 else:
-                    pathCode += " Q{:.2f},{:.2f} {:.2f},{:.2f} {}".format((crd[2]+crd[0])/scale, (crd[3]+crd[1])/scale + baseline, crd[0]/scale, crd[1]/scale + baseline, suff)
+                    dx1 = prevcrd[0] + prevcrd[4]
+                    dy1 = prevcrd[1] + prevcrd[5]
+
+                    dx2 = crd[0] + crd[2]
+                    dy2 = crd[1] + crd[3]
+
+                    xx = crd[0]
+                    yy = crd[1]
+
+                    pathCode += " C{:.2f},{:.2f} {:.2f},{:.2f} {:.2f},{:.2f} {}".format(dx1/scale, dy1/scale + baseline, dx2/scale, dy2/scale + baseline, xx/scale, yy/scale + baseline, suff)
+                prevcrd = crd
                     
                 pathCode = pathCode.strip()
                         
                 maxw = max(maxw, crd[0]/scale) 
                 count += 1
-            
+        
+            if flag == 7 or flag == 3:
+                crd = coords[countsav]
+                dx1 = prevcrd[0] + prevcrd[4]
+                dy1 = prevcrd[1] + prevcrd[5]
+
+                dx2 = crd[0] + crd[2]
+                dy2 = crd[1] + crd[3]
+
+                xx = crd[0]
+                yy = crd[1]
+
+                pathCode += " C{:.2f},{:.2f} {:.2f},{:.2f} {:.2f},{:.2f} Z".format(dx1/scale, dy1/scale + baseline, dx2/scale, dy2/scale + baseline, xx/scale, yy/scale + baseline)
             
             glyphCode += pathCode
             previewCode += pathCode
             previewCode += "\" fill=\"none\" stroke=\"red\" stroke-width=\"1\"  />\n"
-            
+        
         mtx = getMetric(ttFont, chr(ord(ch)), cyr)
         ww = maxw
         if mtx != None:
@@ -355,5 +379,3 @@ def main(args=None):
 
 if __name__ == "__main__":
     sys.exit(main())
-
-
